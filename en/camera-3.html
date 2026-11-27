@@ -28,6 +28,10 @@ article img{border-radius:0 !important}
 @media (max-width: 760px){
 a[style*="min-height: 4"]:not(.hdr-cta){width:100%;justify-content:center;text-align:center}
 [id]{scroll-margin-top:80px}
+.lb-row{flex-wrap:wrap;align-content:center;gap:12px !important}
+.lb-img{order:1;flex:0 0 100%;max-width:100% !important;max-height:72vh !important}
+.lb-nav{order:2}
+[role="dialog"]{padding:64px 8px 16px !important}
 .topbar{justify-content:space-between !important;flex-wrap:nowrap !important;font-size:13px !important;line-height:1.35;padding:6px 12px 6px 16px !important;gap:8px !important}
 .tb-hide{display:none !important}
 .hdr{padding:10px 16px !important;gap:8px !important}
@@ -193,12 +197,12 @@ img{max-width:100%}
 
 <!-- INGRANDIMENTO FOTO -->
 
-<div id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo" style="display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(20, 20, 26, 0.94); flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; box-sizing: border-box">
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo" style="display: none; position: fixed; inset: 0; z-index: 1000; background: #141418; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; box-sizing: border-box">
 <button type="button" data-lb="close" aria-label="Close" style="position: absolute; top: 16px; right: 16px; width: 48px; height: 48px; border: 0; background: rgba(255,255,255,0.12); color: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
-<div style="display: flex; align-items: center; justify-content: center; gap: 16px; width: 100%; max-width: 1400px; flex: 1 1 auto; min-height: 0">
-<button type="button" data-lb="prev" aria-label="Previous photo" style="flex: none; width: 52px; height: 52px; border: 0; background: rgba(255,255,255,0.12); color: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg></button>
-<img id="lb-img" src="" alt="" style="max-width: calc(100% - 140px); max-height: 82vh; object-fit: contain; display: block">
-<button type="button" data-lb="next" aria-label="Next photo" style="flex: none; width: 52px; height: 52px; border: 0; background: rgba(255,255,255,0.12); color: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></button>
+<div class="lb-row" style="display: flex; align-items: center; justify-content: center; gap: 16px; width: 100%; max-width: 1400px; flex: 1 1 auto; min-height: 0">
+<button type="button" class="lb-nav" data-lb="prev" aria-label="Previous photo" style="flex: none; width: 52px; height: 52px; border: 0; background: rgba(255,255,255,0.12); color: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<img class="lb-img" id="lb-img" src="" alt="" style="max-width: calc(100% - 140px); max-height: 82vh; object-fit: contain; display: block">
+<button type="button" class="lb-nav" data-lb="next" aria-label="Next photo" style="flex: none; width: 52px; height: 52px; border: 0; background: rgba(255,255,255,0.12); color: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></button>
 </div>
 <p id="lb-cap" style="margin: 0; color: #DCDDE5; font-size: 15px; text-align: center"></p>
 </div>
