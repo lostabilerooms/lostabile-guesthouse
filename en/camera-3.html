@@ -28,6 +28,8 @@ a{color:#613A43}a:hover{color:#36384C}
 }
 img{max-width:100%}
 @media (max-width: 640px){ a[href="spazi-comuni.html"] span{white-space:normal !important; font-size:16px !important} }
+be-widget{display:block;width:100%}
+be-widget:defined ~ .bw-fallback{display:none !important}
 </style>
 <link rel="alternate" hreflang="it" href="https://guesthouse.lostabile.com/camera-3.html">
 <link rel="alternate" hreflang="en" href="https://guesthouse.lostabile.com/en/camera-3.html">
@@ -121,7 +123,10 @@ img{max-width:100%}
 <p style="margin: 0; font-family: PT Sans, sans-serif; font-size: 28px; font-weight: 700; line-height: 1.15">Book your stay</p>
 <p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 15px; color: #4A4B58"><span style="background: #233852; color: #FFFFFF; font-family: PT Sans, sans-serif; font-weight: 700; padding: 2px 8px">9.3/10</span> on Booking.com (345 reviews)</p>
 <p style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 15px; color: #4A4B58"><span style="background: #233852; color: #FFFFFF; font-family: PT Sans, sans-serif; font-weight: 700; padding: 2px 8px">4.98/5</span> on Airbnb (55 reviews)</p>
-<a href="https://lostabile.bookpage.io/" style="margin-top: 8px; text-align: center; justify-content: center; background: #613A43; color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px; min-height: 48px; box-sizing: border-box; display: flex; align-items: center">Book direct</a>
+<div class="bw-room" data-booking-widget style="margin-top: 8px; display: flex; flex-direction: column">
+<be-widget host="https://lostabile.bookpage.io" property-id="143905" booking-network-id="867" default-adults="2" default-children="0" primary-color="#613A43" secondary-color="#E3CDD2" background-color="#ffffff" border-color="#613A43" button-text-color="#ffffff"></be-widget>
+<a class="bw-fallback" href="https://lostabile.bookpage.io/" style="margin-top: 8px; text-align: center; justify-content: center; background: #613A43; color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px; min-height: 48px; box-sizing: border-box; display: flex; align-items: center">Book direct</a>
+</div>
 <p style="margin: -4px 0 0; font-size: 13px; color: #4A4B58; text-align: center">Best price guaranteed</p>
 <a href="https://www.airbnb.it/pr/lostabile" style="justify-content: center; border: 1.5px solid #2E2F3E; color: #2E2F3E; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px; min-height: 48px; box-sizing: border-box; display: flex; align-items: center">Book on Airbnb</a>
 <a href="https://www.booking.com/hotel/it/lostabile.it.html" style="justify-content: center; border: 1.5px solid #2E2F3E; color: #2E2F3E; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px; min-height: 48px; box-sizing: border-box; display: flex; align-items: center">Book on Booking</a>
@@ -194,5 +199,6 @@ img{max-width:100%}
     if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1)); x0 = null; });
 })();
 </script>
+<script src="https://cdn.ciaobooking.com/widget/js/app.js"></script>
 </body>
 </html>

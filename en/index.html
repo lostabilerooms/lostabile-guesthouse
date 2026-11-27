@@ -38,6 +38,8 @@ summary{cursor:pointer}
 }
 img{max-width:100%}
 @media (max-width: 640px){ a[href="spazi-comuni.html"] span{white-space:normal !important; font-size:16px !important} }
+be-widget{display:block;width:100%}
+be-widget:defined ~ .bw-fallback{display:none !important}
 </style>
 <link rel="alternate" hreflang="it" href="https://guesthouse.lostabile.com/">
 <link rel="alternate" hreflang="en" href="https://guesthouse.lostabile.com/en/">
@@ -84,11 +86,11 @@ img{max-width:100%}
 <p style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; color: #C9D0DA">Guesthouse · Bari, Apulia, Italy</p>
 <h1 style="margin: 0; font-family: PT Sans, sans-serif; font-weight: 700; font-size: clamp(40px, 5.6vw, 72px); line-height: 1.05; max-width: 860px">Comfortable rooms for your stay in Bari</h1>
 <p style="margin: 0; font-size: 20px; max-width: 640px; color: #E3E7ED">LoStabile is a guesthouse designed for independent travellers who wish to experience Bari, including beyond the tourist areas.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
-<a href="https://lostabile.bookpage.io/" style="background: #613A43; color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 26px; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Book direct</a>
-<a href="https://www.airbnb.it/pr/lostabile" style="background: #FFFFFF; color: #1E1E24; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 26px; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Book on Airbnb</a>
-<a href="https://www.booking.com/hotel/it/lostabile.it.html" style="color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 26px; border: 1.5px solid #FFFFFF; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Book on Booking</a>
+<div class="bw-hero" data-booking-widget style="margin-top: 8px; max-width: 900px">
+<be-widget host="https://lostabile.bookpage.io" property-id="143905" booking-network-id="867" default-adults="2" default-children="0" primary-color="#613A43" secondary-color="#E3CDD2" background-color="#ffffff" border-color="#613A43" button-text-color="#ffffff"></be-widget>
+<a class="bw-fallback" href="https://lostabile.bookpage.io/" style="background: #613A43; color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 26px; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Book direct</a>
 </div>
+<p style="margin: 0; font-size: 15px; color: #E3E7ED">Also available on <a href="https://www.airbnb.it/pr/lostabile" style="color: #FFFFFF">Airbnb</a> and <a href="https://www.booking.com/hotel/it/lostabile.it.html" style="color: #FFFFFF">Booking.com</a></p>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 4px">
 <span style="background: #FFFFFF; color: #233852; font-family: PT Sans, sans-serif; font-weight: 700; font-size: 20px; padding: 4px 10px">9.3/10</span>
 <span style="color: #E3E7ED; font-size: 15px">on Booking.com (345 reviews)</span>
@@ -432,6 +434,7 @@ img{max-width:100%}
 </footer>
 
 </div>
+<script src="https://cdn.ciaobooking.com/widget/js/app.js"></script>
 <script>document.querySelectorAll(".nav a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("menu-toggle").checked=false;});});</script>
 </body>
 </html>
