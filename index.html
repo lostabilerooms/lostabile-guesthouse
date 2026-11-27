@@ -17,11 +17,15 @@ html{scroll-behavior:smooth}
 a{color:#613A43}a:hover{color:#36384C}
 summary{cursor:pointer}
 .hero-bg{background-color:#233852;background-image:linear-gradient(90deg,rgba(20,30,50,0.88) 0%,rgba(20,30,50,0.7) 45%,rgba(20,30,50,0.35) 100%),url(images/facciata.jpg);background-size:cover;background-position:center 15%}
+.lang{display:inline-flex;align-items:center;gap:2px}
+.lang a{color:#FFFFFF;text-decoration:none;opacity:0.7;font-weight:700;font-size:13px;letter-spacing:0.06em;padding:6px 6px}
+.lang a:hover{color:#FFFFFF;opacity:1}
+.lang a[aria-current]{opacity:1;text-decoration:underline;text-underline-offset:4px}
 .menu-toggle{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
 .menu-btn{display:none}
 @media (max-width: 760px){
-.topbar{justify-content:center !important;text-align:center;font-size:13px !important;padding:6px 16px !important;gap:0 !important}
-.topbar-contacts{display:none !important}
+.topbar{justify-content:space-between !important;flex-wrap:nowrap !important;font-size:13px !important;line-height:1.35;padding:6px 12px 6px 16px !important;gap:8px !important}
+.tb-hide{display:none !important}
 .hdr{padding:12px 20px !important;gap:10px !important}
 .hdr-logo img{height:40px !important}
 .menu-btn{display:inline-flex;align-items:center;gap:8px;order:2;margin-left:auto;cursor:pointer;font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2E2F3E;border:1.5px solid #2E2F3E;padding:0 14px;min-height:44px;box-sizing:border-box}
@@ -35,6 +39,9 @@ summary{cursor:pointer}
 img{max-width:100%}
 @media (max-width: 640px){ a[href="spazi-comuni.html"] span{white-space:normal !important; font-size:16px !important} }
 </style>
+<link rel="alternate" hreflang="it" href="https://guesthouse.lostabile.com/">
+<link rel="alternate" hreflang="en" href="https://guesthouse.lostabile.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://guesthouse.lostabile.com/">
 </head>
 <body>
 <div style="font-family: Roboto, system-ui, sans-serif; color: #2E2F3E; background: #FFFFFF; font-size: 17px; line-height: 1.6">
@@ -44,8 +51,9 @@ img{max-width:100%}
 <div class="topbar" style="max-width: 1240px; margin: 0 auto; padding: 4px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; font-size: 14px">
 <p style="margin: 0">Prenotando direttamente con noi hai il <strong>miglior prezzo garantito</strong></p>
 <div class="topbar-contacts" style="display: flex; align-items: center; gap: 4px">
-<a href="mailto:lostabile.rooms@gmail.com" style="color: #FFFFFF; text-decoration: none; padding: 0 10px">lostabile.rooms@gmail.com</a>
-<a href="https://www.instagram.com/lostabile.guesthouse/" aria-label="Instagram di LoStabile Guesthouse" style="color: #FFFFFF; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5"></circle></svg></a>
+<span class="lang" role="navigation" aria-label="Lingua / Language"><a href="index.html" aria-current="page" hreflang="it" lang="it">IT</a><a href="en/index.html" hreflang="en" lang="en">EN</a></span>
+<a class="tb-hide" href="mailto:lostabile.rooms@gmail.com" style="color: #FFFFFF; text-decoration: none; padding: 0 10px">lostabile.rooms@gmail.com</a>
+<a class="tb-hide" href="https://www.instagram.com/lostabile.guesthouse/" aria-label="Instagram di LoStabile Guesthouse" style="color: #FFFFFF; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5"></circle></svg></a>
 </div>
 </div>
 </div>

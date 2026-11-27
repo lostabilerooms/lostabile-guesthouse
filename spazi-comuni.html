@@ -14,8 +14,12 @@
 <style>
 body{margin:0;background:#FFFFFF}
 a{color:#613A43}a:hover{color:#36384C}
+.lang{display:inline-flex;align-items:center;gap:2px}
+.lang a{color:#FFFFFF;text-decoration:none;opacity:0.7;font-weight:700;font-size:13px;letter-spacing:0.06em;padding:6px 6px}
+.lang a:hover{color:#FFFFFF;opacity:1}
+.lang a[aria-current]{opacity:1;text-decoration:underline;text-underline-offset:4px}
 @media (max-width: 760px){
-.topbar{text-align:center;font-size:13px !important;padding:8px 16px !important}
+.topbar{font-size:13px !important;line-height:1.35;padding:6px 12px 6px 16px !important}
 .hdr{padding:12px 20px !important;gap:10px 12px !important}
 .hdr-logo img{height:40px !important}
 .hdr-back{order:3;width:100%;font-size:12px !important}
@@ -24,14 +28,18 @@ a{color:#613A43}a:hover{color:#36384C}
 img{max-width:100%}
 @media (max-width: 640px){ a[href="spazi-comuni.html"] span{white-space:normal !important; font-size:16px !important} }
 </style>
+<link rel="alternate" hreflang="it" href="https://guesthouse.lostabile.com/spazi-comuni.html">
+<link rel="alternate" hreflang="en" href="https://guesthouse.lostabile.com/en/spazi-comuni.html">
+<link rel="alternate" hreflang="x-default" href="https://guesthouse.lostabile.com/spazi-comuni.html">
 </head>
 <body>
 <div style="font-family: Roboto, system-ui, sans-serif; color: #2E2F3E; background: #FFFFFF; font-size: 17px; line-height: 1.6">
 
 <!-- TOP BAR -->
 <div style="background: #613A43; color: #FFFFFF">
-<div class="topbar" style="max-width: 1240px; margin: 0 auto; padding: 12px 24px; font-size: 14px">
+<div class="topbar" style="max-width: 1240px; margin: 0 auto; padding: 6px 24px; font-size: 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px">
 <p style="margin: 0">Prenotando direttamente con noi hai il <strong>miglior prezzo garantito</strong></p>
+<span class="lang" role="navigation" aria-label="Lingua / Language"><a href="spazi-comuni.html" aria-current="page" hreflang="it" lang="it">IT</a><a href="en/spazi-comuni.html" hreflang="en" lang="en">EN</a></span>
 </div>
 </div>
 
