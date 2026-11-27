@@ -14,8 +14,16 @@
 <style>
 body{margin:0;background:#FFFFFF}
 a{color:#613A43}a:hover{color:#36384C}
+@media (max-width: 760px){
+.topbar{text-align:center;font-size:13px !important;padding:8px 16px !important}
+.hdr{padding:12px 20px !important;gap:10px 12px !important}
+.hdr-logo img{height:40px !important}
+.hdr-back{order:3;width:100%;font-size:12px !important}
+.hdr-cta{padding:0 16px !important;font-size:12px !important}
+.gallery{grid-template-columns:repeat(2,minmax(0,1fr)) !important;grid-template-rows:none !important;grid-auto-rows:150px;gap:8px !important}
+}
 img{max-width:100%}
-@media (max-width: 640px){ nav[aria-label="Menu principale"]{gap:4px 16px !important; font-size:12px !important} a[href="spazi-comuni.html"] span{white-space:normal !important; font-size:16px !important} }
+@media (max-width: 640px){ a[href="spazi-comuni.html"] span{white-space:normal !important; font-size:16px !important} }
 </style>
 </head>
 <body>
@@ -23,19 +31,19 @@ img{max-width:100%}
 
 <!-- TOP BAR -->
 <div style="background: #613A43; color: #FFFFFF">
-<div style="max-width: 1240px; margin: 0 auto; padding: 12px 24px; font-size: 14px">
+<div class="topbar" style="max-width: 1240px; margin: 0 auto; padding: 12px 24px; font-size: 14px">
 <p style="margin: 0">Prenotando direttamente con noi hai il <strong>miglior prezzo garantito</strong></p>
 </div>
 </div>
 
 <!-- HEADER -->
 <header style="background: #FFFFFF; border-bottom: 1px solid #E4E2DF">
-<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px">
-<a href="index.html" aria-label="LoStabile Guesthouse, torna alla home" style="text-decoration: none; color: #1E1E24; display: inline-flex; flex-direction: column; gap: 2px">
+<div class="hdr" style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px">
+<a class="hdr-logo" href="index.html" aria-label="LoStabile Guesthouse, torna alla home" style="text-decoration: none; color: #1E1E24; display: inline-flex; flex-direction: column; gap: 2px">
 <img src="images/logo-lostabile.png" alt="LoStabile" style="height: 48px; width: auto; display: block">
 </a>
-<a href="index.html" style="color: #2E2F3E; font-family: Montserrat, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none">← Tutte le camere</a>
-<a href="https://lostabile.bookpage.io/" style="background: #613A43; color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 24px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Prenota</a>
+<a class="hdr-back" href="index.html" style="color: #2E2F3E; font-family: Montserrat, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none">← Tutte le camere</a>
+<a class="hdr-cta" href="https://lostabile.bookpage.io/" style="background: #613A43; color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 24px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Prenota</a>
 </div>
 </header>
 
@@ -48,7 +56,7 @@ img{max-width:100%}
 
 <!-- GALLERIA -->
 <section style="max-width: 1240px; margin: 0 auto; padding: 0 24px">
-<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: 220px 220px 240px; gap: 12px">
+<div class="gallery" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: 220px 220px 240px; gap: 12px">
 <button type="button" data-open="0" aria-label="Ingrandisci: Camera 3: letto matrimoniale, scrivania in legno, portafinestra e pavimento in cementine" style="grid-column: span 2; grid-row: span 2; padding: 0; border: 0; background: none; cursor: zoom-in; display: block; width: 100%; height: 100%; overflow: hidden"><img src="images/camera3-principale.jpg" alt="Camera 3: letto matrimoniale, scrivania in legno, portafinestra e pavimento in cementine" style="width: 100%; height: 100%; object-fit: cover; display: block"></button>
 <button type="button" data-open="1" aria-label="Ingrandisci: Camera 3: letto matrimoniale, scrivania con due sedie e lampada a treppiede" style="padding: 0; border: 0; background: none; cursor: zoom-in; display: block; width: 100%; height: 100%; overflow: hidden"><img src="images/camera3-letto.jpg" alt="Camera 3: letto matrimoniale, scrivania con due sedie e lampada a treppiede" style="width: 100%; height: 100%; object-fit: cover; display: block"></button>
 <button type="button" data-open="2" aria-label="Ingrandisci: Camera 3: ingresso con armadio, bagno privato e camera" style="padding: 0; border: 0; background: none; cursor: zoom-in; display: block; width: 100%; height: 100%; overflow: hidden"><img src="images/camera3-ingresso.jpg" alt="Camera 3: ingresso con armadio, bagno privato e camera" style="width: 100%; height: 100%; object-fit: cover; display: block"></button>

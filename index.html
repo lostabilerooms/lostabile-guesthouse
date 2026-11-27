@@ -17,8 +17,23 @@ html{scroll-behavior:smooth}
 a{color:#613A43}a:hover{color:#36384C}
 summary{cursor:pointer}
 .hero-bg{background-color:#233852;background-image:linear-gradient(90deg,rgba(20,30,50,0.88) 0%,rgba(20,30,50,0.7) 45%,rgba(20,30,50,0.35) 100%),url(images/facciata.jpg);background-size:cover;background-position:center 15%}
+.menu-toggle{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.menu-btn{display:none}
+@media (max-width: 760px){
+.topbar{justify-content:center !important;text-align:center;font-size:13px !important;padding:6px 16px !important;gap:0 !important}
+.topbar-contacts{display:none !important}
+.hdr{padding:12px 20px !important;gap:10px !important}
+.hdr-logo img{height:40px !important}
+.menu-btn{display:inline-flex;align-items:center;gap:8px;order:2;margin-left:auto;cursor:pointer;font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2E2F3E;border:1.5px solid #2E2F3E;padding:0 14px;min-height:44px;box-sizing:border-box}
+.hdr-cta{order:3;padding:0 16px !important;font-size:12px !important}
+.nav{order:4;display:none !important;width:100%;flex-direction:column;align-items:stretch !important;gap:0 !important;border-top:1px solid #E4E2DF;margin-top:4px}
+.nav a{padding:14px 0;border-bottom:1px solid #F2F1EF;font-size:14px}
+.menu-toggle:checked ~ .nav{display:flex !important}
+.menu-toggle:focus-visible ~ .menu-btn{outline:2px solid #613A43;outline-offset:2px}
+.dist-row{flex-direction:column !important;gap:2px !important}
+}
 img{max-width:100%}
-@media (max-width: 640px){ nav[aria-label="Menu principale"]{gap:4px 16px !important; font-size:12px !important} a[href="spazi-comuni.html"] span{white-space:normal !important; font-size:16px !important} }
+@media (max-width: 640px){ a[href="spazi-comuni.html"] span{white-space:normal !important; font-size:16px !important} }
 </style>
 </head>
 <body>
@@ -26,9 +41,9 @@ img{max-width:100%}
 
 <!-- TOP BAR -->
 <div style="background: #613A43; color: #FFFFFF">
-<div style="max-width: 1240px; margin: 0 auto; padding: 4px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; font-size: 14px">
+<div class="topbar" style="max-width: 1240px; margin: 0 auto; padding: 4px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; font-size: 14px">
 <p style="margin: 0">Prenotando direttamente con noi hai il <strong>miglior prezzo garantito</strong></p>
-<div style="display: flex; align-items: center; gap: 4px">
+<div class="topbar-contacts" style="display: flex; align-items: center; gap: 4px">
 <a href="mailto:lostabile.rooms@gmail.com" style="color: #FFFFFF; text-decoration: none; padding: 0 10px">lostabile.rooms@gmail.com</a>
 <a href="https://www.instagram.com/lostabile.guesthouse/" aria-label="Instagram di LoStabile Guesthouse" style="color: #FFFFFF; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5"></circle></svg></a>
 </div>
@@ -37,11 +52,12 @@ img{max-width:100%}
 
 <!-- HEADER -->
 <header style="background: #FFFFFF; border-bottom: 1px solid #E4E2DF">
-<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px">
-<a href="#top" aria-label="LoStabile Guesthouse, torna all'inizio" style="text-decoration: none; color: #1E1E24; display: inline-flex; flex-direction: column; gap: 2px">
+<div class="hdr" style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px">
+<a class="hdr-logo" href="#top" aria-label="LoStabile Guesthouse, torna all'inizio" style="text-decoration: none; color: #1E1E24; display: inline-flex; flex-direction: column; gap: 2px">
 <img src="images/logo-lostabile.png" alt="LoStabile" style="height: 48px; width: auto; display: block">
 </a>
-<nav aria-label="Menu principale" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 26px; font-family: Montserrat, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase">
+<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Apri il menu">
+<nav class="nav" aria-label="Menu principale" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 26px; font-family: Montserrat, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase">
 <a href="#camere" style="color: #2E2F3E; text-decoration: none">Camere</a>
 <a href="spazi-comuni.html" style="color: #2E2F3E; text-decoration: none">Spazi comuni</a>
 <a href="#posizione" style="color: #2E2F3E; text-decoration: none">Posizione</a>
@@ -49,7 +65,8 @@ img{max-width:100%}
 <a href="#chi-siamo" style="color: #2E2F3E; text-decoration: none">Chi siamo</a>
 <a href="#contatti" style="color: #2E2F3E; text-decoration: none">Contatti</a>
 </nav>
-<a href="https://lostabile.bookpage.io/" style="background: #613A43; color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 24px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Prenota</a>
+<label for="menu-toggle" class="menu-btn" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>Menu</label>
+<a class="hdr-cta" href="https://lostabile.bookpage.io/" style="background: #613A43; color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 24px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Prenota</a>
 </div>
 </header>
 
@@ -222,8 +239,10 @@ img{max-width:100%}
 <li style="display: flex; gap: 10px"><span aria-hidden="true" style="color: #FFFFFF">•</span><span><strong style="color: #FFFFFF">Deposito bagagli gratuito</strong> (non custodito) prima del check-in e dopo il check-out</span></li>
 <li style="display: flex; gap: 10px"><span aria-hidden="true" style="color: #FFFFFF">•</span><span><strong style="color: #FFFFFF">Parliamo</strong> italiano, inglese, spagnolo e portoghese</span></li>
 </ul>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
 <a href="https://lostabile.bookpage.io/" style="background: #FFFFFF; color: #1E1E24; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 28px; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Verifica disponibilità</a>
-<a href="spazi-comuni.html" style="margin-left: 12px; color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 28px; border: 1.5px solid #FFFFFF; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Scopri gli spazi comuni</a>
+<a href="spazi-comuni.html" style="color: #FFFFFF; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 28px; border: 1.5px solid #FFFFFF; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Scopri gli spazi comuni</a>
+</div>
 </div>
 </div>
 </section>
@@ -235,13 +254,13 @@ img{max-width:100%}
 <h2 style="margin: 0 0 16px; font-family: PT Sans, sans-serif; font-weight: 700; font-size: clamp(32px, 4vw, 48px); line-height: 1.1">La base giusta per scoprire Bari e la Puglia</h2>
 <p style="margin: 0 0 28px; color: #4A4B58">Siamo in Via Generale de Bernardis 21, nel quartiere Libertà: una zona autentica e residenziale, ben collegata al centro e alla stazione.</p>
 <div style="display: flex; flex-direction: column">
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF"><span>Stazione Brigata Bari</span><strong>5 min a piedi</strong></div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF"><span>Centro città</span><strong>20 min a piedi</strong></div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF"><span>Bari Vecchia</span><strong>25 min a piedi</strong></div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF"><span>Parcheggio</span><strong>gratuito su strada e garage privati nei dintorni</strong></div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF"><span>Stazione Bari Centrale</span><strong>25 min a piedi · treno diretto per Brigata Bari</strong></div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF"><span>Spiaggia di San Francesco</span><strong>circa 30 min in autobus</strong></div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF; border-bottom: 1px solid #E4E2DF"><span>Aeroporto di Bari</span><strong>bus e treno diretto per Brigata Bari</strong></div>
+<div class="dist-row" style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF"><span>Stazione Brigata Bari</span><strong>5 min a piedi</strong></div>
+<div class="dist-row" style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF"><span>Centro città</span><strong>20 min a piedi</strong></div>
+<div class="dist-row" style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF"><span>Bari Vecchia</span><strong>25 min a piedi</strong></div>
+<div class="dist-row" style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF"><span>Parcheggio</span><strong>gratuito su strada e garage privati nei dintorni</strong></div>
+<div class="dist-row" style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF"><span>Stazione Bari Centrale</span><strong>25 min a piedi · treno diretto per Brigata Bari</strong></div>
+<div class="dist-row" style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF"><span>Spiaggia di San Francesco</span><strong>circa 30 min in autobus</strong></div>
+<div class="dist-row" style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #E4E2DF; border-bottom: 1px solid #E4E2DF"><span>Aeroporto di Bari</span><strong>bus e treno diretto per Brigata Bari</strong></div>
 </div>
 <a href="https://www.google.com/maps/dir//Via+Generale+de+Bernardis,+21+70123+Bari+BA/@41.1209327,16.8528963,16z" style="margin-top: 28px; color: #2E2F3E; text-decoration: none; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 26px; border: 1.5px solid #2E2F3E; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Come raggiungerci</a>
 </div>
@@ -405,5 +424,6 @@ img{max-width:100%}
 </footer>
 
 </div>
+<script>document.querySelectorAll(".nav a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("menu-toggle").checked=false;});});</script>
 </body>
 </html>
